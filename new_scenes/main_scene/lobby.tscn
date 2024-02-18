@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://7yvnxc6uiqmv"]
+
+[ext_resource type="PackedScene" uid="uid://crcu5nmudm0h1" path="res://new_assets/lobby.blend" id="1_inwdo"]
+
+[node name="lobby" instance=ExtResource("1_inwdo")]
+
+[node name="Point" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 3.62976, 3.25638, 2.13455)
+light_energy = 1.157
+shadow_enabled = true
+shadow_blur = 0.804

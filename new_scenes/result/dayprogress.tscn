@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyulxtpk0f33a"]
+
+[ext_resource type="Script" path="res://new_scenes/result/dayprogress.gd" id="1_1cnqi"]
+[ext_resource type="Theme" uid="uid://djeuw26vj3jkh" path="res://new_scenes/result/result_graph.tres" id="1_uhhbm"]
+
+[node name="dayprogress1" type="VBoxContainer"]
+offset_right = 25.0
+offset_bottom = 357.0
+size_flags_horizontal = 6
+size_flags_vertical = 4
+size_flags_stretch_ratio = 6.1
+alignment = 2
+script = ExtResource("1_1cnqi")
+metadata/value = 0
+metadata/Text = ""
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(25, 160)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_uhhbm")
+step = 1.0
+value = 100.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 26.09)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.721569, 0.721569, 0.721569, 1)
+text = "一"
+horizontal_alignment = 1
+vertical_alignment = 1

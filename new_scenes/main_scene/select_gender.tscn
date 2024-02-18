@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://civtvx2xf77p"]
+
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="1_48af3"]
+[ext_resource type="Script" path="res://new_scenes/main_scene/select_gender.gd" id="1_gbtlo"]
+[ext_resource type="PackedScene" uid="uid://cbevg0bxr8nsg" path="res://new_scenes/main_scene/first_into.tscn" id="2_hnnof"]
+[ext_resource type="PackedScene" uid="uid://dbv1hvxufc1al" path="res://assets/meshes/interactables/push_button.tscn" id="3_sy3kw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ohom4"]
+
+[node name="SelectGender" type="Node3D"]
+script = ExtResource("1_gbtlo")
+
+[node name="Viewport2Din3D" parent="." instance=ExtResource("1_48af3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12346, 1.33141, -2.33696)
+scene = ExtResource("2_hnnof")
+unshaded = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.0459, 0, 0, 0, 0.0508772, 0, 0, 0, 0.967937, 0.127897, 1.44224, 0.345643)
+mesh = SubResource("BoxMesh_ohom4")
+
+[node name="male" parent="." instance=ExtResource("3_sy3kw")]
+transform = Transform3D(2.80643, 0, 0, 0, 2.80643, 0, 0, 0, 2.80643, -0.657776, 1.53402, 0.332371)
+
+[node name="female" parent="." instance=ExtResource("3_sy3kw")]
+transform = Transform3D(2.80643, 0, 0, 0, 2.80643, 0, 0, 0, 2.80643, 0.747, 1.534, 0.332)
+
+[connection signal="button_pressed" from="male" to="." method="_on_male_button_pressed"]
+[connection signal="button_pressed" from="female" to="." method="_on_female_button_pressed"]

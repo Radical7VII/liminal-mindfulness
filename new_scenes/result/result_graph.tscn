@@ -1,0 +1,121 @@
+[gd_scene load_steps=5 format=3 uid="uid://20cri53cb1l0"]
+
+[ext_resource type="PackedScene" uid="uid://cyulxtpk0f33a" path="res://new_scenes/result/dayprogress.tscn" id="1_aqsl7"]
+[ext_resource type="Script" path="res://new_scenes/result/result_graph.gd" id="1_bb2pg"]
+[ext_resource type="Theme" uid="uid://djeuw26vj3jkh" path="res://new_scenes/result/result_graph.tres" id="1_r04ra"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xydff"]
+bg_color = Color(0.972549, 0.980392, 0.972549, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[node name="PrintResult" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_bb2pg")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.0
+offset_top = -190.0
+offset_right = 225.0
+offset_bottom = 304.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.779733, 0.779733)
+theme_override_styles/panel = SubResource("StyleBoxFlat_xydff")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+offset_left = 17.0
+offset_right = 367.0
+offset_bottom = 456.0
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_r04ra")
+text = "每日压力状态趋势"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+theme_override_constants/separation = 22
+
+[node name="dayprogress1" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("1_aqsl7")]
+layout_mode = 2
+size_flags_horizontal = 4
+value = 17
+
+[node name="dayprogress2" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("1_aqsl7")]
+layout_mode = 2
+size_flags_horizontal = 4
+value = 58
+day = "二"
+
+[node name="dayprogress3" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("1_aqsl7")]
+layout_mode = 2
+size_flags_horizontal = 4
+day = "三"
+
+[node name="dayprogress4" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("1_aqsl7")]
+layout_mode = 2
+size_flags_horizontal = 4
+value = 48
+day = "四"
+
+[node name="dayprogress5" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("1_aqsl7")]
+layout_mode = 2
+size_flags_horizontal = 4
+value = 33
+day = "五"
+
+[node name="dayprogress6" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("1_aqsl7")]
+layout_mode = 2
+size_flags_horizontal = 4
+value = 26
+day = "六"
+
+[node name="dayprogress7" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("1_aqsl7")]
+layout_mode = 2
+size_flags_horizontal = 4
+value = 50
+day = "日"
+
+[node name="ColorRect" type="ColorRect" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(350, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+color = Color(0.752941, 0.752941, 0.752941, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_r04ra")
+theme_override_font_sizes/normal_font_size = 12
+text = "> 请继续保持！你可以考虑以下建议来维持优秀状态：
+1. 保持定期适度运动
+2. 充足睡眠
+3. 均衡饮食
+4. 多喝水
+5. 坚持冥想正念
+6. 多进行户外活动
+7. 坚持追踪观察心率趋势"
+fit_content = true
+text_direction = 1
