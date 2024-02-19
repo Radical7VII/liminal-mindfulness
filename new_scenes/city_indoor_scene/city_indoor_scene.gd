@@ -28,5 +28,5 @@ func _on_webxr_primary_changed(webxr_primary: int) -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-    pass
+# func _process(delta):
+#     pass

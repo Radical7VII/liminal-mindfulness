@@ -22,6 +22,7 @@ enum SpawnDataType {
 @export_group("Teleport")
 
 ## Target scene file
+## 目标场景
 @export_file('*.tscn') var scene : String
 
 ## Spawn point data
