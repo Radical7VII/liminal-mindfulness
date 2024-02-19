@@ -1,6 +1,7 @@
-[gd_scene load_steps=103 format=3 uid="uid://cha8x6ai26jg7"]
+[gd_scene load_steps=111 format=3 uid="uid://cha8x6ai26jg7"]
 
 [ext_resource type="PackedScene" uid="uid://cb6teiluojgtj" path="res://new_assets/city.blend" id="1_8hg16"]
+[ext_resource type="Script" path="res://new_scenes/city_indoor_scene/city_indoor_scene.gd" id="1_lp46g"]
 [ext_resource type="Material" uid="uid://bhchqeutlu0os" path="res://assets/maps/holodeck/materials/floor.material" id="2_5q0vk"]
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="3_vvr30"]
 [ext_resource type="PackedScene" uid="uid://ct3p5sgwvkmva" path="res://assets/meshes/control_pad/control_pad.tscn" id="4_yxqe3"]
@@ -83,6 +84,13 @@
 [ext_resource type="Animation" uid="uid://d2ukhr3n2r1u8" path="res://addons/godot-xr-tools/hands/animations/right/Thumb.res" id="81_2lwb6"]
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="82_i55of"]
 [ext_resource type="PackedScene" uid="uid://deyk5frilshws" path="res://assets/meshes/control_pad/control_pad_location_right.tscn" id="83_ykw0e"]
+[ext_resource type="PackedScene" uid="uid://dklmvy16am6l7" path="res://new_assets/city_kit/low_buildingA.glb" id="84_2btbh"]
+[ext_resource type="PackedScene" uid="uid://djoxgjhpvuqt1" path="res://new_assets/city_kit/large_buildingA.glb" id="85_g44e8"]
+[ext_resource type="PackedScene" uid="uid://bdveiy2xs0e6b" path="res://new_assets/city_kit/large_buildingC.glb" id="86_3s6gi"]
+[ext_resource type="PackedScene" uid="uid://1egp20r341lt" path="res://new_assets/city_kit/skyscraperA.glb" id="87_2yk3y"]
+[ext_resource type="PackedScene" uid="uid://2si7rlm7hrqg" path="res://new_assets/city_kit/skyscraperC.glb" id="88_66o1e"]
+[ext_resource type="PackedScene" uid="uid://db8e4d84ewur3" path="res://new_assets/city_kit/skyscraperE.glb" id="89_afh3a"]
+[ext_resource type="PackedScene" uid="uid://be6en3q4lielq" path="res://new_scenes/city_indoor_scene/spot_light_3d.tscn" id="90_pb41h"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_aiwuc"]
 size = Vector2(96, 96)
@@ -129,34 +137,34 @@ _data = {
 "Thumb": ExtResource("41_ctinu")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_37hom"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_03ccu"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_14tmr"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dmbnt"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_a85ru"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_tpxtd"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Little_Distal_L", "Armature/Skeleton3D:Little_Intermediate_L", "Armature/Skeleton3D:Little_Metacarpal_L", "Armature/Skeleton3D:Little_Proximal_L", "Armature/Skeleton3D:Middle_Distal_L", "Armature/Skeleton3D:Middle_Intermediate_L", "Armature/Skeleton3D:Middle_Metacarpal_L", "Armature/Skeleton3D:Middle_Proximal_L", "Armature/Skeleton3D:Ring_Distal_L", "Armature/Skeleton3D:Ring_Intermediate_L", "Armature/Skeleton3D:Ring_Metacarpal_L", "Armature/Skeleton3D:Ring_Proximal_L", "Armature/Skeleton3D:Thumb_Distal_L", "Armature/Skeleton3D:Thumb_Metacarpal_L", "Armature/Skeleton3D:Thumb_Proximal_L", "Armature/Skeleton:Little_Distal_L", "Armature/Skeleton:Little_Intermediate_L", "Armature/Skeleton:Little_Proximal_L", "Armature/Skeleton:Middle_Distal_L", "Armature/Skeleton:Middle_Intermediate_L", "Armature/Skeleton:Middle_Proximal_L", "Armature/Skeleton:Ring_Distal_L", "Armature/Skeleton:Ring_Intermediate_L", "Armature/Skeleton:Ring_Proximal_L", "Armature/Skeleton:Thumb_Distal_L", "Armature/Skeleton:Thumb_Proximal_L"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cn4t5"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_foim1"]
 animation = &"Grip 5"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_trvmp"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_jgxpa"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Index_Distal_L", "Armature/Skeleton3D:Index_Intermediate_L", "Armature/Skeleton3D:Index_Metacarpal_L", "Armature/Skeleton3D:Index_Proximal_L", "Armature/Skeleton:Index_Distal_L", "Armature/Skeleton:Index_Intermediate_L", "Armature/Skeleton:Index_Proximal_L"]
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_h0psr"]
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_4ouqj"]
 graph_offset = Vector2(-536, 11)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_37hom")
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_03ccu")
 nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_14tmr")
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_dmbnt")
 nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_a85ru")
+nodes/Grip/node = SubResource("AnimationNodeBlend2_tpxtd")
 nodes/Grip/position = Vector2(0, 20)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_cn4t5")
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_foim1")
 nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_trvmp")
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_jgxpa")
 nodes/Trigger/position = Vector2(-360, 20)
 node_connections = [&"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1", &"output", 0, &"Grip"]
 
@@ -199,34 +207,34 @@ _data = {
 "Thumb": ExtResource("81_2lwb6")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_d5xrs"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uqy3a"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rxrk3"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pts5v"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_q6c2e"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_564e0"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Little_Distal_R", "Armature/Skeleton3D:Little_Intermediate_R", "Armature/Skeleton3D:Little_Metacarpal_R", "Armature/Skeleton3D:Little_Proximal_R", "Armature/Skeleton3D:Middle_Distal_R", "Armature/Skeleton3D:Middle_Intermediate_R", "Armature/Skeleton3D:Middle_Metacarpal_R", "Armature/Skeleton3D:Middle_Proximal_R", "Armature/Skeleton3D:Ring_Distal_R", "Armature/Skeleton3D:Ring_Intermediate_R", "Armature/Skeleton3D:Ring_Metacarpal_R", "Armature/Skeleton3D:Ring_Proximal_R", "Armature/Skeleton3D:Thumb_Distal_R", "Armature/Skeleton3D:Thumb_Metacarpal_R", "Armature/Skeleton3D:Thumb_Proximal_R", "Armature/Skeleton:Little_Distal_R", "Armature/Skeleton:Little_Intermediate_R", "Armature/Skeleton:Little_Proximal_R", "Armature/Skeleton:Middle_Distal_R", "Armature/Skeleton:Middle_Intermediate_R", "Armature/Skeleton:Middle_Proximal_R", "Armature/Skeleton:Ring_Distal_R", "Armature/Skeleton:Ring_Intermediate_R", "Armature/Skeleton:Ring_Proximal_R", "Armature/Skeleton:Thumb_Distal_R", "Armature/Skeleton:Thumb_Proximal_R"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sxqak"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3v5t5"]
 animation = &"Grip 5"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_y7xtu"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_72ov8"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Index_Distal_R", "Armature/Skeleton3D:Index_Intermediate_R", "Armature/Skeleton3D:Index_Metacarpal_R", "Armature/Skeleton3D:Index_Proximal_R", "Armature/Skeleton:Index_Distal_R", "Armature/Skeleton:Index_Intermediate_R", "Armature/Skeleton:Index_Proximal_R"]
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_u3so7"]
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_qjw70"]
 graph_offset = Vector2(-552.664, 107.301)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_d5xrs")
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_uqy3a")
 nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_rxrk3")
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_pts5v")
 nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_q6c2e")
+nodes/Grip/node = SubResource("AnimationNodeBlend2_564e0")
 nodes/Grip/position = Vector2(0, 40)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_sxqak")
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_3v5t5")
 nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_y7xtu")
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_72ov8")
 nodes/Trigger/position = Vector2(-360, 40)
 node_connections = [&"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1", &"output", 0, &"Grip"]
 
@@ -234,7 +242,7 @@ node_connections = [&"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigge
 sky_top_color = Color(0, 0.2, 0.341176, 1)
 sky_horizon_color = Color(0.572549, 0.215686, 0.164706, 1)
 sky_curve = 0.0749999
-ground_bottom_color = Color(0.572549, 0.215686, 0.164706, 1)
+ground_horizon_color = Color(0.572549, 0.215686, 0.164706, 1)
 ground_curve = 0.0386375
 sun_angle_max = 31.56
 
@@ -248,20 +256,19 @@ background_color = Color(0.957627, 0.955773, 0.998554, 1)
 sky = SubResource("Sky_gso2g")
 ssao_enabled = true
 ssao_radius = 0.87
-ssil_intensity = 4.46
-ssil_sharpness = 1.0
+ssil_enabled = true
 sdfgi_enabled = true
 sdfgi_read_sky_light = false
-sdfgi_energy = 11.21
-fog_enabled = true
-fog_light_color = Color(0.180392, 0.329412, 0.658824, 1)
-fog_light_energy = 0.28
-fog_sky_affect = 0.082
+glow_enabled = true
+fog_light_energy = 0.68
+fog_sky_affect = 0.0
+fog_height = -573.44
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.0459
+volumetric_fog_density = 0.0059
 volumetric_fog_sky_affect = 0.0
 
 [node name="CityIndoorScene" type="Node3D"]
+script = ExtResource("1_lp46g")
 
 [node name="city" parent="." instance=ExtResource("1_8hg16")]
 
@@ -275,7 +282,7 @@ mesh = SubResource("QuadMesh_aiwuc")
 surface_material_override/0 = ExtResource("2_5q0vk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
-transform = Transform3D(0.112, 0, 0, 0, 1.754, 0, 0, 0, 0.1, 0, -0.118408, 0)
+transform = Transform3D(0.1, 0, 0, 0, 1.5, 0, 0, 0, 0.1, 0, -0.118408, 0)
 shape = SubResource("BoxShape3D_8nj4c")
 
 [node name="XROrigin3D" type="XROrigin3D" parent="."]
@@ -410,7 +417,7 @@ root_node = NodePath("../Hand_Nails_low_L")
 libraries = {
 "": SubResource("AnimationLibrary_kw48d")
 }
-tree_root = SubResource("AnimationNodeBlendTree_h0psr")
+tree_root = SubResource("AnimationNodeBlendTree_4ouqj")
 
 [node name="FunctionPoseDetector" parent="XROrigin3D/LeftHand" instance=ExtResource("42_qgegh")]
 
@@ -543,7 +550,7 @@ root_node = NodePath("../Hand_Nails_low_R")
 libraries = {
 "": SubResource("AnimationLibrary_reqae")
 }
-tree_root = SubResource("AnimationNodeBlendTree_u3so7")
+tree_root = SubResource("AnimationNodeBlendTree_qjw70")
 
 [node name="FunctionPoseDetector" parent="XROrigin3D/RightHand" instance=ExtResource("42_qgegh")]
 
@@ -558,9 +565,9 @@ ranged_enable = false
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.782781, -0.312104, 0.538372, -0.130797, 0.928328, 0.347993, -0.608396, 0.201985, -0.7675, 2.90711, 1.89999, -2.96105)
-light_color = Color(0.788235, 0.717647, 0.933333, 1)
-light_energy = 0.229
-light_indirect_energy = 0.0
+light_color = Color(0.2, 0.329412, 0.835294, 1)
+light_energy = 0.386
+light_indirect_energy = 6.245
 light_bake_mode = 1
 shadow_enabled = true
 
@@ -568,12 +575,45 @@ shadow_enabled = true
 environment = SubResource("Environment_d32i7")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02821, 0.989128, -0.426954)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05225, 1.03496, -0.458672)
 light_color = Color(1, 0.733333, 0.388235, 1)
-light_energy = 0.293
+light_energy = 0.529
 light_size = 0.093
 shadow_enabled = true
+omni_range = 1.2
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+light_color = Color(0.394451, 0.454943, 0.7405, 1)
+light_energy = 0.05
+
+[node name="buildings" type="Node3D" parent="."]
+
+[node name="large_buildingA2" parent="buildings" instance=ExtResource("85_g44e8")]
+transform = Transform3D(2.23613, 0, 9.89027, 0, 10.1399, 0, -9.89027, 0, 2.23613, -17.0048, -16.9462, -24.9345)
+
+[node name="large_buildingC2" parent="buildings" instance=ExtResource("86_3s6gi")]
+transform = Transform3D(-5.21955, 0, -1.16365, 0, 5.34769, 0, 1.16365, 0, -5.21955, 5.53359, -6.48284, -13.2517)
+
+[node name="skyscraperA2" parent="buildings" instance=ExtResource("87_2yk3y")]
+transform = Transform3D(6.34222, 0, -8.30189, 0, 10.4473, 0, 8.30189, 0, 6.34222, -22.8559, -16.9541, -74.3677)
+
+[node name="skyscraperC2" parent="buildings" instance=ExtResource("88_66o1e")]
+transform = Transform3D(-65.6728, 0, -91.4506, 0, 156.754, 0, 91.4506, 0, -65.6728, 176.737, -421.096, -1187.2)
+
+[node name="skyscraperE2" parent="buildings" instance=ExtResource("89_afh3a")]
+transform = Transform3D(26.3823, 0, 0, 0, 26.3823, 0, 0, 0, 26.3823, -5.53813, -34.1881, -128.623)
+
+[node name="low_buildingA2" parent="buildings" instance=ExtResource("84_2btbh")]
+transform = Transform3D(-49.0272, 0, -87.5337, 0, 100.329, 0, 87.5337, 0, -49.0272, -75.4002, -25.7203, -96.3878)
+
+[node name="SpotLight3D" parent="." instance=ExtResource("90_pb41h")]
+
+[node name="SpotLight3D2" parent="." instance=ExtResource("90_pb41h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2.02916, 1.71986, -0.611871)
+
+[node name="SpotLight3D3" parent="." instance=ExtResource("90_pb41h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2.02916, 1.71986, 0.323269)
 
 [editable path="XROrigin3D/LeftHand/LeftPhysicsHand"]
 [editable path="XROrigin3D/LeftHand/LeftPhysicsHand/Hand_Nails_low_L"]

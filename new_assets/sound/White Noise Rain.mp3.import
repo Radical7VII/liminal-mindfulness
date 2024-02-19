@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://xx6jujoqt4hj"
+path="res://.godot/imported/White Noise Rain.mp3-c10866f88ec6b2b7d0aba1cf6fea8475.mp3str"
+
+[deps]
+
+source_file="res://new_assets/sound/White Noise Rain.mp3"
+dest_files=["res://.godot/imported/White Noise Rain.mp3-c10866f88ec6b2b7d0aba1cf6fea8475.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
