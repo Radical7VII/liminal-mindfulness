@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dxspluaw18ewc"
+path="res://.godot/imported/世界上有哪些著名的抽象派画家？现代的又有哪些？有哪些很好的抽象作品集推荐吗？ - 知乎.webp-e3aae81a13d5aa78cefc26fbe77ee7dd.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://new_scenes/gallery_scene/paints/世界上有哪些著名的抽象派画家？现代的又有哪些？有哪些很好的抽象作品集推荐吗？ - 知乎.webp"
+dest_files=["res://.godot/imported/世界上有哪些著名的抽象派画家？现代的又有哪些？有哪些很好的抽象作品集推荐吗？ - 知乎.webp-e3aae81a13d5aa78cefc26fbe77ee7dd.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

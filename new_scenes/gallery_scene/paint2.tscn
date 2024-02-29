@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbhb1f6nrdyiu"]
+
+[ext_resource type="Texture2D" uid="uid://b5otvcytxiehw" path="res://new_scenes/gallery_scene/paints/Light at Two Lights - Edward Hopper — Google 艺术与文化.jpg" id="1_q1u8t"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LightAtTwoLights-EdwardHopper—Google艺术与文化" type="Sprite2D" parent="MarginContainer"]
+position = Vector2(578, 322)
+scale = Vector2(1.20217, 1.20217)
+texture = ExtResource("1_q1u8t")

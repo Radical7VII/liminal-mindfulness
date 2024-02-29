@@ -1,0 +1,175 @@
+[gd_scene load_steps=12 format=3 uid="uid://clhyrlre4w8hc"]
+
+[ext_resource type="Script" path="res://new_scenes/subtitle_ui.gd" id="1_6td8a"]
+
+[sub_resource type="Animation" id="Animation_x0k8l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["你好！欢迎来到阈限空间心理疗愈APP，你也可以叫它“疗阈空间”。"]
+}
+
+[sub_resource type="Animation" id="Animation_6kmiv"]
+resource_name = "gallery"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.90414, 5.5, 8.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["欢迎来到“艺术之境”！", "这里有三种艺术风格", "从左到右是抽象派、写实派、印象派", "请选择最能够代表你的性格的流派"]
+}
+
+[sub_resource type="Animation" id="Animation_732wn"]
+resource_name = "garden"
+length = 7.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.00278),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["这里是心灵花园", "在这三朵花中选择一朵你最喜欢的花吧"]
+}
+
+[sub_resource type="Animation" id="Animation_htd6p"]
+resource_name = "mind"
+
+[sub_resource type="Animation" id="Animation_loimv"]
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.75964),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["欢迎来到星空奇遇", "请选择一个你喜欢的星球！"]
+}
+
+[sub_resource type="Animation" id="Animation_sjiwe"]
+resource_name = "welcome"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.6, 9.69566, 14.3672, 18.5352, 22.6069, 25.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["你好！欢迎来到阈限空间心理疗愈APP，你也可以叫它“疗阈空间”。", "我是这个空间的创作者，同时也是你的私人疗愈伙伴。", "在这里，我将陪伴你完成整个流程", "哦？看起来这是你第一次光临。", "那么，先让我们通过一些小游戏，为你打造一个定制化的空间吧！", "跟我来！", "跟我来！"]
+}
+
+[sub_resource type="Animation" id="Animation_0pj31"]
+resource_name = "gallery_abstracionism"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.6677),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["你选择了抽象派。", "这代表你可能寻求自由和想象，具有开放、富有创造力的性格"]
+}
+
+[sub_resource type="Animation" id="Animation_e4ouc"]
+resource_name = "gallery_realism"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["你选择了写实主义。", "这代表你的性格可能更注重实际和细节"]
+}
+
+[sub_resource type="Animation" id="Animation_8765m"]
+resource_name = "gallery_impressionism"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.6, 4.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["你选择了印象派。", "这代表你可能在心理上追求柔和情感", "具有细腻、感性的性格"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fyi7v"]
+_data = {
+"RESET": SubResource("Animation_x0k8l"),
+"gallery": SubResource("Animation_6kmiv"),
+"gallery_abstracionism": SubResource("Animation_0pj31"),
+"gallery_impressionism": SubResource("Animation_8765m"),
+"gallery_realism": SubResource("Animation_e4ouc"),
+"garden": SubResource("Animation_732wn"),
+"mind": SubResource("Animation_htd6p"),
+"space": SubResource("Animation_loimv"),
+"welcome": SubResource("Animation_sjiwe")
+}
+
+[node name="Subtitle" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 600.0
+offset_bottom = 100.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_6td8a")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "你好！欢迎来到阈限空间心理疗愈APP，你也可以叫它“疗阈空间”。"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fyi7v")
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

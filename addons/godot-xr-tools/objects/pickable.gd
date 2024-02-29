@@ -263,6 +263,7 @@ func pick_up(by: Node3D) -> void:
 			restore_freeze = freeze
 
 	# turn off physics on our pickable object
+	# 关闭物理
 	freeze = true
 	collision_layer = picked_up_layer
 	collision_mask = 0
@@ -387,6 +388,7 @@ func _get_grab_point(grabber : Node3D, current : XRToolsGrabPoint) -> XRToolsGra
 			point = p
 
 	# Resolve redirection
+	# 解决重定向
 	while point is XRToolsGrabPointRedirect:
 		point = point.target
 

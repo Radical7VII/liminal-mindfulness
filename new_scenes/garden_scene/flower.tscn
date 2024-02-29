@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bg6q1cqbbwhjd"]
+
+[ext_resource type="Script" path="res://new_scenes/garden_scene/flower.gd" id="1_8kgux"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_giisq"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_c86sd"]
+
+[node name="flower" type="RigidBody3D"]
+transform = Transform3D(0.505573, 0, 0, 0, 0.505573, 0, 0, 0, 0.505573, 0, 0, 0)
+script = ExtResource("1_8kgux")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_giisq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_c86sd")

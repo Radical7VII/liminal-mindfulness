@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://b01c6vsi87uae"]
+
+[ext_resource type="Script" path="res://new_scenes/space_scene/star_pointer.gd" id="1_tfc1a"]
+[ext_resource type="Script" path="res://addons/godot-xr-tools/objects/highlight/highlight_visible.gd" id="2_x1und"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_dj2ie"]
+flip_faces = true
+radius = 0.21
+height = 0.42
+radial_segments = 16
+rings = 7
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0oyuq"]
+shading_mode = 0
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4xtya"]
+radius = 0.329713
+
+[node name="star" type="RigidBody3D"]
+collision_layer = 5242881
+freeze = true
+script = ExtResource("1_tfc1a")
+
+[node name="GrabHighlight2" type="Node3D" parent="."]
+transform = Transform3D(1.57917, 0, 0, 0, 1.57917, 0, 0, 0, 1.57917, 0, 0, 0)
+script = ExtResource("2_x1und")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GrabHighlight2"]
+mesh = SubResource("SphereMesh_dj2ie")
+skeleton = NodePath("../../MeshInstance3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_0oyuq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_4xtya")

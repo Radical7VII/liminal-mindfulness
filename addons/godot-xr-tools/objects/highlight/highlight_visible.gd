@@ -11,6 +11,7 @@ func is_xr_class(name : String) -> bool:
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# Turn off until requested
+	# 关闭显示直到请求
 	if not Engine.is_editor_hint():
 		visible = false
 
