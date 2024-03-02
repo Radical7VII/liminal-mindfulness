@@ -13,13 +13,14 @@ enum Stars {
     PLUTO
 }
 
+@onready var subtitle_anim_player = $Subtitle/Viewport/Subtitle/AnimationPlayer
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-    var viewport_node = get_node("/SubtitleUI/Viewport")
-    if viewport_node:
-        print('viewport获取到了')
-    else:
-        print('没有获取到')
+    if Engine.is_editor_hint():
+        return
+    subtitle_anim_player.play('space_start')
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,17 +29,17 @@ func _process(_delta):
 
 
 # 选择星星
-func _on_pluto_select_star(star_name:Variant):
+func _on_pluto_select_star(_star_name:Variant):
     # 冥王星
     _on_selected(Stars.PLUTO)
 
 
-func _on_saturn_select_star(star_name:Variant):
+func _on_saturn_select_star(_star_name:Variant):
     # 土星
     _on_selected(Stars.SATURN)
 
 
-func _on_mars_select_star(star_name:Variant):
+func _on_mars_select_star(_star_name:Variant):
     # 火星
     _on_selected(Stars.MARS)
 
@@ -47,16 +48,17 @@ func _on_selected(star_name:Stars):
     print('选择了星星：%s' % star_name)
     match star_name:
         Stars.MARS:
-            pass
+            subtitle_anim_player.play('space_mars')
         Stars.SATURN:
-            pass
+            subtitle_anim_player.play('space_saturn')
         Stars.PLUTO:
-            pass
+            subtitle_anim_player.play('space_pluto')
     $Timer.start()
 
 
 func _on_timer_timeout():
     # 倒计时结束
+    print('倒计时结束')
     teleport()
 
 

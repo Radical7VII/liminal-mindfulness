@@ -2,9 +2,9 @@
 extends XRToolsSceneBase
 
 enum Flower {
-    FLOWER1,
-    FLOWER2,
-    FLOWER3
+    DAISY,
+    SUNFLOWER,
+    VIOLET
 }
 
 @export_group("Teleport")
@@ -12,9 +12,13 @@ enum Flower {
 @export_file('*.tscn') var scene : String
 
 
+@onready var subtitle_anim_player = $Subtitle/Viewport/Subtitle/AnimationPlayer
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-    pass # Replace with function body.
+    if !Engine.is_editor_hint():
+        subtitle_anim_player.play('garden_start')
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,28 +26,16 @@ func _process(_delta):
     pass
 
 
-func _on_flower_select_flower(flower_name:Variant):
-    selected_flower(Flower.FLOWER1)
-
-
-func _on_flower2_select_flower(flower_name:Variant):
-    selected_flower(Flower.FLOWER2)
-
-
-func _on_flower3_select_flower(flower_name:Variant):
-    selected_flower(Flower.FLOWER3)
-
-
 func selected_flower(flower_name:int):
     # 当玩家选择了画后
     print('选择了：%s 画派' % flower_name)
     match flower_name:
-        Flower.FLOWER1:
-            pass
-        Flower.FLOWER2:
-            pass
-        Flower.FLOWER3:
-            pass
+        Flower.DAISY:
+            subtitle_anim_player.play('garden_daisy')
+        Flower.SUNFLOWER:
+            subtitle_anim_player.play('garden_sunflower')
+        Flower.VIOLET:
+            subtitle_anim_player.play('garden_violet')
     # 计时开始，准备传送
     $Timer.start()
 
@@ -57,3 +49,15 @@ func teleport():
     var _scene_base : XRToolsSceneBase
     _scene_base = XRTools.find_xr_ancestor(self, "*", "XRToolsSceneBase")
     _scene_base.load_scene(scene, '')
+
+
+func _on_daisy_select_flower(flower_name:Variant):
+    selected_flower(Flower.DAISY)
+
+
+func _on_sunflower_select_flower(flower_name:Variant):
+    selected_flower(Flower.SUNFLOWER)
+
+
+func _on_violet_select_flower(flower_name:Variant):
+    selected_flower(Flower.VIOLET)

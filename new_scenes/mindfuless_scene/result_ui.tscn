@@ -1,0 +1,344 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkhkf58rwgm1k"]
+
+[ext_resource type="Theme" uid="uid://1u0lmqqh1ebx" path="res://new_scenes/mindfuless_scene/progress_bar.tres" id="1_s8w2j"]
+
+[sub_resource type="Animation" id="Animation_m3mxp"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar/HBoxContainer/ProgressBar:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar/HBoxContainer/ProgressBar2:value")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar/HBoxContainer/ProgressBar7:value")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(75, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar/HBoxContainer/ProgressBar6:value")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(80, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar/HBoxContainer/ProgressBar5:value")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(60, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar/HBoxContainer/ProgressBar4:value")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(45, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar/HBoxContainer/ProgressBar3:value")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(35, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("PanelContainer/MarginContainer2/HBoxContainer/suggestion/Label:visible_ratio")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_5dyex"]
+resource_name = "show_up"
+length = 3.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar/HBoxContainer/ProgressBar:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 90, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar/HBoxContainer/ProgressBar2:value")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 80, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.1, 0.3)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar/HBoxContainer/ProgressBar3:value")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 35, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.2, 0.4)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar/HBoxContainer/ProgressBar4:value")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 45, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.3, 0.5)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar/HBoxContainer/ProgressBar5:value")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 60, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.4, 0.6)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar/HBoxContainer/ProgressBar6:value")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 80, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.5, 0.7)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar/HBoxContainer/ProgressBar7:value")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 75, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.6, 0.8)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("PanelContainer/MarginContainer2/HBoxContainer/suggestion/Label:visible_ratio")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.9, 2.5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_83brs"]
+_data = {
+"RESET": SubResource("Animation_m3mxp"),
+"show_up": SubResource("Animation_5dyex")
+}
+
+[node name="Result" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 415.0
+offset_bottom = 309.0
+theme = ExtResource("1_s8w2j")
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer2"]
+layout_mode = 2
+
+[node name="daily_stress" type="VBoxContainer" parent="PanelContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.0
+
+[node name="title" type="Label" parent="PanelContainer/MarginContainer2/HBoxContainer/daily_stress"]
+layout_mode = 2
+text = "每日压力趋势"
+
+[node name="stressbar" type="MarginContainer" parent="PanelContainer/MarginContainer2/HBoxContainer/daily_stress"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar/HBoxContainer"]
+custom_minimum_size = Vector2(20, 80)
+layout_mode = 2
+size_flags_vertical = 1
+step = 5.0
+fill_mode = 3
+
+[node name="ProgressBar2" type="ProgressBar" parent="PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar/HBoxContainer"]
+custom_minimum_size = Vector2(20, 80)
+layout_mode = 2
+size_flags_vertical = 1
+step = 5.0
+fill_mode = 3
+
+[node name="ProgressBar3" type="ProgressBar" parent="PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar/HBoxContainer"]
+custom_minimum_size = Vector2(20, 80)
+layout_mode = 2
+size_flags_vertical = 1
+step = 5.0
+value = 35.0
+fill_mode = 3
+
+[node name="ProgressBar4" type="ProgressBar" parent="PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar/HBoxContainer"]
+custom_minimum_size = Vector2(20, 80)
+layout_mode = 2
+size_flags_vertical = 1
+step = 5.0
+value = 45.0
+fill_mode = 3
+
+[node name="ProgressBar5" type="ProgressBar" parent="PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar/HBoxContainer"]
+custom_minimum_size = Vector2(20, 80)
+layout_mode = 2
+size_flags_vertical = 1
+step = 5.0
+value = 60.0
+fill_mode = 3
+
+[node name="ProgressBar6" type="ProgressBar" parent="PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar/HBoxContainer"]
+custom_minimum_size = Vector2(20, 80)
+layout_mode = 2
+size_flags_vertical = 1
+step = 5.0
+value = 80.0
+fill_mode = 3
+
+[node name="ProgressBar7" type="ProgressBar" parent="PanelContainer/MarginContainer2/HBoxContainer/daily_stress/stressbar/HBoxContainer"]
+custom_minimum_size = Vector2(20, 80)
+layout_mode = 2
+size_flags_vertical = 1
+step = 5.0
+value = 75.0
+fill_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer/MarginContainer2/HBoxContainer/daily_stress"]
+custom_minimum_size = Vector2(0, 3.805)
+layout_mode = 2
+color = Color(0.890196, 0.890196, 0.890196, 1)
+
+[node name="VSplitContainer" type="VSplitContainer" parent="PanelContainer/MarginContainer2/HBoxContainer/daily_stress"]
+custom_minimum_size = Vector2(0, 6.27)
+layout_mode = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="PanelContainer/MarginContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(15.525, 0)
+layout_mode = 2
+
+[node name="suggestion" type="VBoxContainer" parent="PanelContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.0
+
+[node name="title2" type="Label" parent="PanelContainer/MarginContainer2/HBoxContainer/suggestion"]
+layout_mode = 2
+text = "综合建议"
+
+[node name="VSplitContainer2" type="VSplitContainer" parent="PanelContainer/MarginContainer2/HBoxContainer/suggestion"]
+custom_minimum_size = Vector2(0, 6.27)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer2/HBoxContainer/suggestion"]
+custom_minimum_size = Vector2(450, 400)
+layout_mode = 2
+text = "综合今日的HRV（rMSSD）和静息心率情况看，你的自主神经系统适应性和恢复能力保持在稳定水平。整体状态优秀，身体压力状态较小，能很好的应对今日生活中的挑战，请继续保持优秀状态。
+
+请继续保持！你可以考虑以下建议来维持优秀状态：
+
+保持定期适度运动
+充足睡眠
+均衡饮食
+多喝水
+坚持冥想正念
+多进行户外活动
+坚持追踪观察心率趋势"
+autowrap_mode = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_83brs")
+}

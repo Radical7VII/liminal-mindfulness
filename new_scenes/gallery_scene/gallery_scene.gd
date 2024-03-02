@@ -17,10 +17,14 @@ enum ArtType {
 
 @export_file('*.tscn') var scene : String
 
+
+@onready var subtitle_anim_player = $Subtitle/Viewport/Subtitle/AnimationPlayer
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-    pass
-
+    if !Engine.is_editor_hint():
+        subtitle_anim_player.play('gallery_start')
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -51,10 +55,13 @@ func selected_paint(paint_name:ArtType):
     match paint_name:
         ArtType.ABSTRACTIONISM:
             print('你选择了抽象派。这代表你可能寻求自由和想象，具有开放、富有创造力的性格')
+            subtitle_anim_player.play('gallery_abstracionism')
         ArtType.REALISM:
             print('你选择了写实主义。这代表你可能更注重实际和细节的性格')
+            subtitle_anim_player.play('gallery_realism')
         ArtType.IMPRESSIONISM:
             print('你选择了印象派。这代表你可能在心理上追求柔和情感，具有细腻、感性的性格。')
+            subtitle_anim_player.play('gallery_impressionism')
     # 计时开始，准备传送
     $Timer.start()
 	
